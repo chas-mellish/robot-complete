@@ -2,7 +2,7 @@
 #
 # Python Module to externalise all Pi2Go specific hardware
 #
-# Created by Gareth Davies and Zachary Igielman, May 2014
+# Created by Gareth Davies and Zachary Igielman, May 2014, Utilised by Matthew Timmons-Brown for official tutorials
 # Updated June 2014 to include Pi2Go-Lite within same framework
 # Copyright 4tronix
 #
@@ -10,8 +10,6 @@
 # No warranty is provided or implied
 #
 #======================================================================
-
-
 #======================================================================
 # General Functions
 # (Both versions)
@@ -20,8 +18,6 @@
 # cleanup(). Sets all motors and LEDs off and sets GPIO to standard values
 # version(). Returns 1 for Full Pi2Go, and 2 for Pi2Go-Lite. Invalid until after init() has been called
 #======================================================================
-
-
 #======================================================================
 # Motor Functions
 # (Both Versions)
@@ -36,8 +32,6 @@
 # go(leftSpeed, rightSpeed): controls motors in both directions independently using different positive/negative speeds. -100<= leftSpeed,rightSpeed <= 100
 # go(speed): controls motors in both directions together with positive/negative speed parameter. -100<= speed <= 100
 #======================================================================
-
-
 #======================================================================
 # RGB LED Functions
 # (Full Pi2Go only)
@@ -45,8 +39,6 @@
 # setLED(LED, Red, Green, Blue): Sets the LED specified to required RGB value. 0 >= LED <= 4; 0 <= R,G,B <= 4095
 # setAllLEDs(Red, Green, Blue): Sets all LEDs to required RGB. 0 <= R,G,B <= 4095
 #======================================================================
-
-
 #======================================================================
 # WHITE LED Functions
 # (Pi2Go-Lite only)
@@ -54,8 +46,6 @@
 # LsetLED(LED, value): Sets the LED specified to OFF == 0 or ON >= 1
 # LsetAllLEDs(value): Sets both LEDs to OFF == 0 or ON >= 1
 #======================================================================
-
-
 #======================================================================
 # IR Sensor Functions
 # (Both Versions)
@@ -67,16 +57,12 @@
 # irLeftLine(): Returns state of Left IR Line sensor
 # irRightLine(): Returns state of Right IR Line sensor
 #======================================================================
-
-
 #======================================================================
 # UltraSonic Functions
 # (Both Versions)
 #
 # getDistance(). Returns the distance in cm to the nearest reflecting object. 0 == no object
 #======================================================================
-
-
 #======================================================================
 # Light Sensor Functions
 # (Full Pi2Go only)
@@ -87,8 +73,6 @@
 # getLightBL(). Returns the value 0..1023 for Back-Left light sensor
 # getLightBR(). Returns the value 0..1023 for Back-Right light sensor
 #======================================================================
-
-
 #======================================================================
 # Servo Functions
 # 
@@ -96,15 +80,11 @@
 # stop Servos(). terminates the servo background process
 # setServo(Servo, Degrees). Sets the servo to position in degrees -90 to +90
 #======================================================================
-
-
 #======================================================================
 # Switch Functions
 # 
 # getSwitch(). Returns the value of the tact switch: True==pressed
 #======================================================================
-
-
 # Import all necessary libraries
 import RPi.GPIO as GPIO, sys, threading, time, os
 from Adafruit_PWM_Servo_Driver import PWM
