@@ -183,9 +183,9 @@ def init():
     except:
         PGType = PGLite
 
-    # initialise servos (Pi2Go-Lite only)
-    if PGType == PGLite:
-        startServos()
+    # initialise servos (Pi2Go-Lite only) Matt TB - Servo activation not necessary on init
+    #if PGType == PGLite:
+    #    startServos()
 
     #set up Pi2Go-Lite White LEDs as outputs
         GPIO.setup(frontLED, GPIO.OUT)
