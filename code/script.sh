@@ -5,8 +5,8 @@
 # Plus I have nowhere else *reliable* to host it!
 
 echo "Just installing that stuff for you sir/madam! I'll be finished in a second!"
-wget -q https://github.com/the-raspberry-pi-guy/pi2go/blob/master/extra_software/servod.xxx -O servod
-wget -q https://raw.githubusercontent.com/the-raspberry-pi-guy/pi2go/master/extra_software/Adafruit_PWM_Servo_Driver.py -O Adafruit_PWM_Servo_Driver.py
-wget -q https://raw.githubusercontent.com/the-raspberry-pi-guy/pi2go/master/extra_software/Adafruit_I2C.py -O Adafruit_I2C.py
-wget -q https://github.com/the-raspberry-pi-guy/pi2go/blob/master/extra_software/sgh_PCF8591P.pyc -O sgh_PCF8591P.pyc
+wget -q https://github.com/the-raspberry-pi-guy/pi2go/raw/master/extra_software/servod.xxx -O servod
+wget -q https://github.com/the-raspberry-pi-guy/pi2go/raw/master/extra_software/Adafruit_PWM_Servo_Driver.py -O Adafruit_PWM_Servo_Driver.py
+wget -q https://github.com/the-raspberry-pi-guy/pi2go/raw/master/extra_software/Adafruit_I2C.py -O Adafruit_I2C.py
+wget -q https://github.com/the-raspberry-pi-guy/pi2go/raw/master/extra_software/sgh_PCF8591P.pyc -O sgh_PCF8591P.pyc
 chmod +x servod
