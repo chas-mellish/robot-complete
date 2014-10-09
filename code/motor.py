@@ -9,6 +9,8 @@ import sys
 import tty
 import termios
 
+UP, DOWN, RIGHT, LEFT = range(4)
+
 def readchar():
     fd = sys.stdin.fileno()
     old_settings = termios.tcgetattr(fd)
@@ -30,7 +32,8 @@ def readkey(getchar_fn=None):
     if ord(c2) != 0x5b:
         return c1
     c3 = getchar()
-    return chr(0x10 + ord(c3) - 65)  # 16=Up, 17=Down, 18=Right, 19=Left arrows
+    return ord(c3) - 65  # 0=Up, 1=Down, 2=Right, 3=Left arrows
+
 
 # End of the functions that read your keyboard
 
@@ -42,18 +45,19 @@ pi2go.init()
 try:
     while True:
         keyp = readkey()
-        if keyp == 'w' or ord(keyp) == 16:
+        if keyp == 'w' or keyp == UP:
             pi2go.forward(speed)
             print 'Forward', speed
-        elif keyp == 'z' or ord(keyp) == 17:
+        elif keyp == 's' or keyp == DOWN:
             pi2go.reverse(speed)
-            print 'Reverse', speed
-        elif keyp == 's' or ord(keyp) == 18:
+            print 'Backward', speed
+        elif keyp == 'd' or keyp == RIGHT:
             pi2go.spinRight(speed)
             print 'Spin Right', speed
-        elif keyp == 'a' or ord(keyp) == 19:
+        elif keyp == 'a' or keyp == LEFT:
             pi2go.spinLeft(speed)
             print 'Spin Left', speed
+
         elif keyp == '.' or keyp == '>':
             speed = min(100, speed+10)
             print 'Speed+', speed
