@@ -90,8 +90,8 @@
 #======================================================================
 # Import all necessary libraries
 import RPi.GPIO as GPIO, sys, threading, time, os
-from Adafruit_PWM_Servo_Driver import PWM
-from sgh_PCF8591P import sgh_PCF8591P
+from extra_software.Adafruit_PWM_Servo_Driver import PWM
+from extra_software.sgh_PCF8591P import sgh_PCF8591P
 
 # Define Type of Pi2Go
 PGNone = 0
