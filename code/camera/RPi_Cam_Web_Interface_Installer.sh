@@ -66,7 +66,7 @@ case "$1" in
 #        sudo cp -r /etc/rc.local.bak /etc/rc.local
 #        sudo chmod 755 /etc/rc.local
 #        echo "Changed autostart"
-        ;;
+#        ;;
 
   install)
         sudo killall raspimjpeg
