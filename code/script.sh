@@ -3,6 +3,7 @@
 # Also some people will want to play around with the extra stuff!
 # Essentially you will download this twice but I thought that it was best for clarity and neatness
 # Plus I have nowhere else *reliable* to host it!
+# Test
 
 echo "Just installing that stuff for you sir/madam! I'll be finished in a second!"
 wget -q https://github.com/the-raspberry-pi-guy/pi2go/raw/master/extra_software/servod.xxx -O servod
