@@ -28,6 +28,7 @@
 #
 # Edited by jfarcher to work with github
 # Edited by slabua to support custom installation folder
+# Edited by Matthew Timmons-Brown (The Raspberry Pi Guy) for ease of use within Python
 
 
 # Configure below the folder name where to install the software to,
@@ -55,16 +56,16 @@ case "$1" in
         echo "Removed everything"
         ;;
 
-  autostart_yes)
-        sudo cp -r etc/rc_local_run/rc.local /etc/
-        sudo chmod 755 /etc/rc.local
-        echo "Changed autostart"
-        ;;
+#  autostart_yes)
+#        sudo cp -r etc/rc_local_run/rc.local /etc/
+#        sudo chmod 755 /etc/rc.local
+#        echo "Changed autostart"
+#        ;;
 
-  autostart_no)
-        sudo cp -r /etc/rc.local.bak /etc/rc.local
-        sudo chmod 755 /etc/rc.local
-        echo "Changed autostart"
+#  autostart_no)
+#        sudo cp -r /etc/rc.local.bak /etc/rc.local
+#        sudo chmod 755 /etc/rc.local
+#        echo "Changed autostart"
         ;;
 
   install)
@@ -131,6 +132,8 @@ case "$1" in
         fi
         sudo cp -r etc/motion/motion.conf /etc/motion/
         sudo chmod 640 /etc/motion/motion.conf
+        sudo cp -r /etc/rc.local.bak /etc/rc.local
+        sudo chmod 755 /etc/rc.local
 
         echo "Installer finished"
         ;;
@@ -169,4 +172,3 @@ case "$1" in
         ;;
 
 esac
-
