@@ -3,10 +3,8 @@
 # on the Pi2Go in order to sense obstacles and avoid them
 # Created by Matthew Timmons-Brown and Simon Beal
 
-# Imports the library
-import pi2go
+import pi2go, time
 
-# Intialises the library
 pi2go.init()
 
 # Here we set the speed to 40 out of 100 - feel free to change!
@@ -28,13 +26,12 @@ try:
         pi2go.spinLeft(speed)
       pi2go.stop()
     while not (pi2go.irLeft() or pi2go.irRight()):
-      # While the IR sensors aren't detecting anything, try the ultrasonic!
-      if pi2go.getDistance() <= 3:
+      if pi2go.getDistance() <= 3: # If the distance is less than 3cm, spin right for 1 second
         pi2go.spinRight(speed)
+        time.sleep(1)
       else:
         pi2go.forward(speed)
     pi2go.stop()
 
-# Cleans up your program nicely
-finally:
+finally: # Even if there was an error, cleanup
   pi2go.cleanup()
