@@ -13,7 +13,7 @@ class Adafruit_I2C :
     "Gets the version number of the Raspberry Pi board"
     # Courtesy quick2wire-python-api
     # https://github.com/quick2wire/quick2wire-python-api
-    try:p
+    try:
       with open('/proc/cpuinfo','r') as f:
         for line in f:
           if line.startswith('Revision'):
