@@ -1,17 +1,18 @@
 #!/usr/bin/python
 #
-
+#
 # THIS IS THE PI2GO LIBRARY! GREETINGS HUMAN!
-
+#
 # Python Module to externalise all Pi2Go specific hardware
 #
-# Created by Gareth Davies and Zachary Igielman, May 2014, Utilised by Matthew Timmons-Brown for officially recognised tutorials
+# Created by Gareth Davies and Zachary Igielman, May 2014
 # Updated June 2014 to include Pi2Go-Lite within same framework
 # Copyright 4tronix
 #
 # This code is in the public domain and may be freely copied and used
 # No warranty is provided or implied
 #
+# Utilised by Matthew Timmons-Brown for officially recognised tutorials - significant modification since original script
 #======================================================================
 #======================================================================
 # General Functions
