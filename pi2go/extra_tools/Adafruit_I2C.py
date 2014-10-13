@@ -13,7 +13,7 @@ class Adafruit_I2C :
     "Gets the version number of the Raspberry Pi board"
     # Courtesy quick2wire-python-api
     # https://github.com/quick2wire/quick2wire-python-api
-    try:
+    try:p
       with open('/proc/cpuinfo','r') as f:
         for line in f:
           if line.startswith('Revision'):
@@ -47,8 +47,9 @@ class Adafruit_I2C :
     return val
 
   def errMsg(self):
-    print "Error accessing device at address 0x%02X" % self.address
-    raise Exception("Error accesing I2C Device") # Added by Simon Walters to raise an error if no device found
+    # Commented out by Matthew Timmons-Brown to stop annoying errors on the Pi2Go-Lite
+    #print "Error accessing device at address 0x%02X" % self.address
+    #raise Exception("Error accesing I2C Device") # Added by Simon Walters to raise an error if no device found
     return -1
 
   def write8(self, reg, value):
