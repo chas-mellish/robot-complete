@@ -8,7 +8,7 @@ import pi2go, time
 pi2go.init()
 
 # Here we set the speed to 40 out of 100 - feel free to change!
-speed = 40
+speed = 60
 
 try:
   while True:
@@ -17,12 +17,12 @@ try:
     if left == right:
       # Forward
       pi2go.forward(speed)
-    elif left:
+    elif left == True:
       # Left
-      pi2go.spinLeft(speed)
-    elif right:
-      # Right
       pi2go.spinRight(speed)
+    elif right == True:
+      # Right
+      pi2go.spinLeft(speed)
 
 finally: # Even if there was an error, cleanup
   pi2go.cleanup()
