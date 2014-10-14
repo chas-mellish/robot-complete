@@ -3,8 +3,6 @@
 
 import subprocess
 
-subprocess.call("./camera/camera_install.sh", "start")
-
 try:
     subprocess.call("./camera/camera_install.sh", "start")
     
