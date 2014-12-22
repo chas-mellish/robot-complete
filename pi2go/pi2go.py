@@ -1,6 +1,5 @@
 #!/usr/bin/python
 #
-#
 # THIS IS THE PI2GO LIBRARY! GREETINGS HUMAN!
 #
 # Python Module to externalise all Pi2Go specific hardware

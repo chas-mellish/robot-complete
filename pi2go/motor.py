@@ -37,7 +37,6 @@ def readkey(getchar_fn=None):
     c3 = getchar()
     return ord(c3) - 65  # 0=Up, 1=Down, 2=Right, 3=Left arrows
 
-
 # End of the functions that read your keyboard
 
 speed = 30
